@@ -1,9 +1,0 @@
-<section class="contact-page container flex column">
-    <a class="edit-link-btn clean-link" routerLink="/edit">
-        <fa-icon [icon]="faUserPlus" size="lg" [styles]="{'color': '#f2931b'}">
-        </fa-icon>
-    </a>
-    <h1>Contacts</h1>
-    <contact-filter [filterBy]="filterBy" (onFilter)="onSetFilter($event)"></contact-filter>
-    <contact-list [contacts]="contacts$ | async"></contact-list>
-</section>
