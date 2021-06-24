@@ -1,0 +1,17 @@
+<header class="app-header flex align-center container">
+    <div class="logo flex" routerLink="">
+        <img src="../../../assets/img/bitcoin-btc-logo.svg" alt="logo">
+        <h1>Mr.Bitcoin</h1>
+    </div>
+    <hamburger-menu [isMenuOpen]="isMenuOpen" (onToggleMenu)="onToggleMenu()"></hamburger-menu>
+    <nav class="main-nav" [ngClass]="{'open':isMenuOpen, 'close' : !isMenuOpen}">
+        <ul class="clean-list flex">
+            <li (click)="onToggleMenu()"><a class="nav-btn clean-link" routerLink="" routerLinkActive="active"
+                    [routerLinkActiveOptions]="{exact:true}">Homepage</a></li>
+            <li (click)="onToggleMenu()"><a class="nav-btn clean-link" routerLink="/contact"
+                    routerLinkActive="active">Contacts</a></li>
+            <li (click)="onToggleMenu()"><a class="nav-btn clean-link" routerLink="/statistics"
+                    routerLinkActive="active">Statistics</a></li>
+        </ul>
+    </nav>
+</header>

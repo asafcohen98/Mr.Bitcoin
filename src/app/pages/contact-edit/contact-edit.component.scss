@@ -1,0 +1,53 @@
+@import "../../../assets/styles/setup/variables";
+
+.contact-edit {
+    position: relative;
+
+    .go-back-btn,
+    .remove-btn {
+        position: absolute;
+        cursor: pointer;
+        margin: 0 0;
+        background: none;
+    }
+
+
+    .go-back-btn {
+        left: 1rem;
+        top: 1rem;
+    }
+
+    .remove-btn {
+        right: 1rem;
+        top: 1rem;
+    }
+
+    .contact-editor {
+
+        width: 300px;
+        border-radius: $borderRad1;
+        max-width: 350px;
+        padding: 1rem;
+        background-color: $clr2;
+        
+        > *:not(:last-child) {
+            margin-bottom: 1rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+        }
+
+        form {
+            label {
+                font-family: Roboto-Black;
+                color: $clr3;
+            }
+            input {
+                &:last-of-type {
+                    margin-bottom: 2rem;
+                }
+            }
+        }
+    }
+}

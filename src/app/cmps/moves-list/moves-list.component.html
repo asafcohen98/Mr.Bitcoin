@@ -1,0 +1,15 @@
+<div class="moves-list flex column align-center">
+    <h3>
+        <span>{{title}}</span>
+        <fa-icon [icon]="faCommentDollar" [styles]="{'color': '#f2931b'}">
+        </fa-icon>
+    </h3>
+    <div *ngFor="let move of moves" class="move flex align-center">
+        <img src="../../../assets/img/bitcoin-btc-logo.svg" alt="">
+        <div class="transfer-content flex column full">
+            <span class="to">To {{move.to}}</span>
+            <span class="at">{{move.at | date}}</span>
+        </div>
+       <span class="amount">&#x20BF;{{move.amount}}</span>
+    </div>
+</div>

@@ -1,0 +1,5 @@
+<section *ngIf="mktPrice && confirmedTrans" class="statistics flex column justify-center align-center">
+  <chart [chartData]="mktPrice.values | chartValues" [chartTitle]="mktPrice.description "></chart>
+  <chart  [chartData]="confirmedTrans.values | chartValues" [chartTitle]="confirmedTrans.description"></chart>
+</section>
+<loader *ngIf="!mktPrice || !confirmedTrans" ></loader>

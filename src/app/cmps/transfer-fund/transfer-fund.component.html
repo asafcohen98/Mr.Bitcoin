@@ -1,0 +1,8 @@
+<div class="transfer-fund">
+    <h3>Transfer coins to {{contact.name}}</h3>
+    <form class="flex column align-center" (ngSubmit)="onTransfer.emit(amount)">
+        <input min="0" [max]="maxCoins" type="number" name="amount" id="amount" placeholder="Amount"
+            [(ngModel)]="amount" autofocus required>
+        <button class="primary-btn">Transfer</button>
+    </form>
+</div>

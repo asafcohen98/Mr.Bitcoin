@@ -1,0 +1,25 @@
+<section *ngIf="contact" class="contact-details container flex column justify-center align-center">
+  <button class="go-back-btn" (click)="onBack()">
+    <fa-icon [icon]="faArrowAltCircleLeft" size="2x" [styles]="{'color': '#f2931b'}">
+    </fa-icon>
+  </button>
+  <div class="first-row flex wrap">
+    <div class="contact-info flex column align-center">
+      <a class="edit-link-btn">
+        <fa-icon [icon]="faEdit" size="lg" [styles]="{'color': '#f2931b'}" [routerLink]="['/contact/edit',contact._id]">
+        </fa-icon>
+      </a>
+      <img src="https://robohash.org/set_set5/${{contact._id}}?size=200x200" alt="">
+      <p><span>Name</span>: {{contact.name}}</p>
+      <p><span>Age</span>: {{contact.email}}</p>
+      <p><span>Phone</span>: {{contact.phone}}</p>
+    </div>
+    <h3 *ngIf="contactMoves && !contactMoves.length">No moves to show</h3>
+    <moves-list *ngIf=" contactMoves&& contactMoves.length" [moves]="contactMoves" title="Your Moves">
+    </moves-list>
+  </div>
+  <h3 *ngIf="!maxCoins">No coins to transfer</h3>
+  <transfer-fund *ngIf="maxCoins" [maxCoins]="maxCoins" [contact]="contact" (onTransfer)="onTransferCoins($event)">
+  </transfer-fund>
+</section>
+<loader *ngIf="!contact"></loader>

@@ -1,0 +1,15 @@
+@import "../../../assets/styles/setup/variables";
+
+.sign-up {
+    > *:not(:last-child) {
+        margin-bottom: 0.5rem;
+    }
+    img {
+        width: 100px;
+    }
+
+    label {
+        color: $clr3;
+        font-family: Roboto-Black;
+    }
+}

@@ -1,0 +1,8 @@
+<section class="sign-up flex column justify-center align-center">
+    <img src="../../../assets/img/bitcoin-btc-logo.svg" alt="">
+    <label for="name">Please enter your name:</label>
+    <form (ngSubmit)="onSignUp()">
+        <input type="text" name="name" id="name" placeholder="Name" [(ngModel)]="name" autofocus required>
+        <button class="primary-btn">Sign up</button>
+    </form>
+</section>

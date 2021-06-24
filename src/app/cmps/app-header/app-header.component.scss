@@ -1,0 +1,79 @@
+@import "../../../assets/styles/setup/variables";
+@import "../../../assets/styles/setup/mixins";
+
+.app-header {
+    position: relative;
+    height: 60px;
+    background-color: $clr2;
+    box-shadow: 1px 0px 3px 1px #0000000d;
+    margin-bottom: 1rem;
+
+    > *:not(:last-child) {
+        margin-inline-end: 2rem;
+    }
+
+    .logo {
+        cursor: pointer;
+        img {
+            width: 40px;
+            margin-inline-end: 1rem;
+        }
+        h1 {
+            color: $clr3;
+            font-size: 30px;
+        }
+    }
+
+    .main-nav {
+        background-color: $clr2;
+        box-shadow: 1px 0px 3px 1px #0000000d;
+        z-index: 1;
+        padding: 1rem;
+        text-align: center;
+        width: 250px;
+        top: 60px;
+        right: 0;
+        position: fixed;
+        border-bottom-left-radius: $borderRad1;
+        transition: transform 0.3 ease-in-out;
+
+        ul {
+            flex-direction: column;
+        }
+
+        &.open {
+            transform: translateX(0%);
+        }
+
+        &.close {
+            transform: translateX(100%);
+        }
+
+        @include for-normal-layout {
+            background-color: unset;
+            box-shadow: unset;
+            z-index: unset;
+            padding: unset;
+            text-align: unset;
+            width: unset;
+            top: unset;
+            right: unset;
+            position: unset;
+            transform: unset;
+            border-bottom-left-radius: unset;
+
+            ul {
+                flex-direction: unset;
+            }
+
+          
+        &.open {
+            transform:unset;
+        }
+
+        &.close {
+            transform: unset;
+        }
+        }
+    }
+}
